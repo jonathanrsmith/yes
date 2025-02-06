@@ -1,0 +1,294 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GoogleAPI_TokenExchangeApproval" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1234,3891" sap2010:WorkflowViewState.IdRef="GoogleAPI_TokenExchangeApproval_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="56">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Description: This sequence clicks through the Google Chrome windows for approviong the GSuite API Token exchange.&#xA;&#xA;Pre: GSuite API Scope used and Chrome Approval Windows open.&#xA;&#xA;Post: Token Exchange completed and approval windows closed.&#xA;&#xA;Arguments:" DisplayName="GoogleAPI_TokenExchangeApproval" sap:VirtualizedContainerService.HintSize="698,3826" sap2010:WorkflowViewState.IdRef="Sequence_17">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:Browser" Name="browserChromeApproval" />
+      <Variable x:TypeArguments="x:Boolean" Name="boolExist" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="636,90" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="GoogleAPI_TokenExchangeApproval: Start" />
+    <ui:UiElementExists DisplayName="Element Exists 'Sign in with Google'" Exists="[boolExist]" sap:VirtualizedContainerService.HintSize="636,107" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+      <ui:UiElementExists.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fde4215a-0635-44af-a2da-4b65b49979e9" InformativeScreenshot="50a8c8cf48ee243e9de4a787d123a55b" Selector="&lt;html app='chrome.exe' title='Sign in - Google Accounts' /&gt;&lt;webctrl aaname='Sign in with Google' /&gt;" TimeoutMS="30000" WaitForReady="COMPLETE" />
+      </ui:UiElementExists.Target>
+    </ui:UiElementExists>
+    <If Condition="[boolExist]" DisplayName="If google sign in needed" sap:VirtualizedContainerService.HintSize="636,3191" sap2010:WorkflowViewState.IdRef="If_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="558,2874" sap2010:WorkflowViewState.IdRef="Sequence_16">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:Click DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" ContinueOnError="True" DelayBefore="1000" DisplayName="Click Leave, if there" sap:VirtualizedContainerService.HintSize="496,107" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a5098fe3-59ab-4524-a71f-cce6d9af3586" InformativeScreenshot="912c47bba8aef3522c790e66bab4e0d0" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Leave site?' /&gt;&lt;ctrl name='Leave site?' role='dialog' /&gt;&lt;ctrl name='Leave' role='push button' /&gt;" TimeoutMS="10000" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <Delay DisplayName="Delay 5 seconds" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="496,90" sap2010:WorkflowViewState.IdRef="Delay_4" />
+          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" BrowserType="Chrome" ContinueOnError="True" DisplayName="Attach Browser - Sign in - Google Accounts" sap:VirtualizedContainerService.HintSize="496,2486" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="5b079e9e277e86c1c8069098d0789d22" Selector="&lt;html app='chrome.exe' title='Sign in - Google Accounts' /&gt;" TimeoutMS="15000" UiBrowser="[browserChromeApproval]">
+            <ui:BrowserScope.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                </ActivityAction.Argument>
+                <Sequence sap:VirtualizedContainerService.HintSize="462,2339" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,2228" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:Click DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" ContinueOnError="True" DelayBefore="1000" DisplayName="Click User Account" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="Click_32" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a5098fe3-59ab-4524-a71f-cce6d9af3586" InformativeScreenshot="a77ca2570bc9939f33434edde9954947" Selector="&lt;webctrl parentid='headingText' tag='SPAN' /&gt;&lt;nav up='4' /&gt;&lt;webctrl aria-role='link' tag='DIV' class='VV3oRb YZVTmd SmR8' idx='1' /&gt;" TimeoutMS="10000" WaitForReady="COMPLETE" />
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="338,90" sap2010:WorkflowViewState.IdRef="Delay_8" />
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'Continue' button" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="Click_24" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="False">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="35c770a4-06b8-41dc-95dc-3670f95c44af" InformativeScreenshot="da48c6f9d554036150d1668560b86481" Selector="&lt;webctrl parentid='headingText' tag='SPAN' /&gt;&lt;nav up='4' /&gt;&lt;webctrl aaname='Continue' tag='SPAN' innertext='Continue' /&gt;" TimeoutMS="500">
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <ui:Check AlterIfDisabled="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" ContinueOnError="True" DisplayName="Check 'Sheets' check box" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="Check_12">
+                      <ui:Check.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d33bc36f-b6aa-422e-87e9-6b6f06f28e7e" InformativeScreenshot="934d5bd892072b5a05382f0c9c5dc821" Selector="&lt;webctrl parentid='view_container' tag='DIV' innertext='See, edit, create, and delete all your Google Sheets spreadsheets. Learn more' idx='2' /&gt;&lt;webctrl tag='INPUT' /&gt;" TimeoutMS="5000">
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Check.Target>
+                    </ui:Check>
+                    <ui:Check AlterIfDisabled="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" ContinueOnError="True" DisplayName="Check 'Calendar' check box" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="Check_13">
+                      <ui:Check.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d33bc36f-b6aa-422e-87e9-6b6f06f28e7e" InformativeScreenshot="934d5bd892072b5a05382f0c9c5dc821" Selector="&lt;webctrl parentid='view_container' tag='DIV' innertext='See, edit, share, and permanently delete all the calendars you can access using Google Calendar. Learn more' idx='2' /&gt;&lt;webctrl tag='INPUT' type='checkbox' /&gt;" TimeoutMS="100">
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Check.Target>
+                    </ui:Check>
+                    <ui:Check AlterIfDisabled="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" ContinueOnError="True" DisplayName="Check 'Drive' check box" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="Check_14">
+                      <ui:Check.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d33bc36f-b6aa-422e-87e9-6b6f06f28e7e" InformativeScreenshot="934d5bd892072b5a05382f0c9c5dc821" Selector="&lt;webctrl parentid='view_container' tag='DIV' innertext='See, edit, create, and delete all of your Google Drive files. Learn more' idx='1' /&gt;&lt;webctrl tag='INPUT' type='checkbox' /&gt;" TimeoutMS="100">
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Check.Target>
+                    </ui:Check>
+                    <ui:Check AlterIfDisabled="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" ContinueOnError="True" DisplayName="Check 'Drive2' check box" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="Check_15">
+                      <ui:Check.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d33bc36f-b6aa-422e-87e9-6b6f06f28e7e" InformativeScreenshot="934d5bd892072b5a05382f0c9c5dc821" Selector="&lt;webctrl parentid='view_container' tag='DIV' innertext='See, edit, create, and delete only the specific Google Drive files you use with this app.*' idx='1' /&gt;&lt;webctrl tag='INPUT' type='checkbox' /&gt;" TimeoutMS="100">
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Check.Target>
+                    </ui:Check>
+                    <ui:Check AlterIfDisabled="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" ContinueOnError="True" DisplayName="Check 'Gmail' check box" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="Check_16">
+                      <ui:Check.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d33bc36f-b6aa-422e-87e9-6b6f06f28e7e" InformativeScreenshot="934d5bd892072b5a05382f0c9c5dc821" Selector="&lt;webctrl parentid='view_container' tag='DIV' innertext='Read, compose, send, and permanently delete all your email from Gmail*' idx='1' /&gt;&lt;webctrl tag='INPUT' type='checkbox' /&gt;" TimeoutMS="100">
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Check.Target>
+                    </ui:Check>
+                    <ui:Check AlterIfDisabled="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" ContinueOnError="True" DisplayName="Check 'Gmail' check box" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="Check_20">
+                      <ui:Check.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d33bc36f-b6aa-422e-87e9-6b6f06f28e7e" InformativeScreenshot="5e4211059fd5d3253884cb5e4bb0ec97" Selector="&lt;webctrl tag='INPUT' /&gt;" TimeoutMS="100">
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Check.Target>
+                    </ui:Check>
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'Continue' button" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="Click_30" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="False">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="35c770a4-06b8-41dc-95dc-3670f95c44af" InformativeScreenshot="4e15763a0b5a797325ded3a039abf426" Selector="&lt;webctrl class='VfPpkd-RLmnJb' parentid='submit_approve_access' tag='DIV' /&gt;" TimeoutMS="500">
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click Allow button" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e03e4a6d-f9ab-4d5b-90dd-14290c2037f5" InformativeScreenshot="06ef56dfc8ffdfadb0a1d0dc44e471a9" Selector="&lt;webctrl parentid='submit_approve_access' tag='SPAN' aaname='Allow' /&gt;" TimeoutMS="10000" WaitForReady="INTERACTIVE" />
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,141" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Delay Starting...&quot;]" />
+                    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="338,90" sap2010:WorkflowViewState.IdRef="Delay_7" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,141" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Delay Ended&quot;]" />
+                    <ui:CloseTab Browser="[browserChromeApproval]" ContinueOnError="True" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="CloseTab_4" />
+                  </Sequence>
+                </Sequence>
+              </ActivityAction>
+            </ui:BrowserScope.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:BrowserScope>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Google authenication not needed, bypassing&quot;]" />
+      </If.Else>
+    </If>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="636,90" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="GoogleAPI_TokenExchangeApproval: End" />
+  </Sequence>
+</Activity>

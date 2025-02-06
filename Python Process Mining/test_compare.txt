@@ -1,0 +1,1117 @@
++++ file2.txt
++<Activity mc:Ignorable="sap sap2010" x:Class="Main_Workflow" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1872,1247" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
++      <x:String>GlobalVariablesNamespace</x:String>
+
++      <x:String>GlobalConstantsNamespace</x:String>
+
++      <x:String>UiPath.DataTableUtilities</x:String>
+
++    <scg:List x:TypeArguments="AssemblyReference" Capacity="48">
+
++      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+
++      <AssemblyReference>System.Memory.Data</AssemblyReference>
+
++      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+
++      <AssemblyReference>System.Console</AssemblyReference>
+
++      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+
++      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+
++      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+
++      <AssemblyReference>System.ComponentModel</AssemblyReference>
+
++      <AssemblyReference>System.Private.Uri</AssemblyReference>
+
++    </scg:List>
+
++      <Variable x:TypeArguments="x:String" Default="H:\FedPay End of Month Reporting_Converted\Data\FedPay EoM Reporting Config.xlsx" Name="strFilePathConfigFile" />
+
++      <Variable x:TypeArguments="x:String" Default="H:\FedPay End of Month Reporting_Converted\Data\" Name="strFilePathDataFolder" />
+
++        <x:Double x:Key="Height">1144.662557162827</x:Double>
+
++          <av:Size x:Key="ShapeSize">219,52</av:Size>
+
++          <av:PointCollection x:Key="ConnectorLocation">369.5,146 369.5,176 359.5,176 359.5,196.5</av:PointCollection>
+
++      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="" DisplayName="Initial Setup.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="219,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Sequences - Initial Setup\\Initial Setup.xaml">
+
++            <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">tblConfigQueries</CSharpReference>
+
++            <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">tblConfigSettings</CSharpReference>
+
++            <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">tblConfigDates</CSharpReference>
+
++            <CSharpReference x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">dbConn1</CSharpReference>
+
++            <CSharpReference x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">dbConn2</CSharpReference>
+
++            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">strFilePathConfigFile</CSharpValue>
+
++            <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">blnShouldStop</CSharpReference>
+
++            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">strFilePathDataFolder</CSharpValue>
+
++            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">blnShouldStop</CSharpValue>
+
++                    <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">tblConfigSettings</CSharpValue>
+
++                    <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">tblConfigDates</CSharpValue>
+
++                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_63">strFilePathDataFolder</CSharpValue>
+
++                    <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_64">tblConfigQueries</CSharpValue>
+
++              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Run Queries.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Sequences - SQL Queries\\Run Queries.xaml">
+
++                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">strFilePathConfigFile</CSharpValue>
+
++                    <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">tblConfigSettings</CSharpValue>
+
++                    <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">tblConfigDates</CSharpValue>
+
++                    <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">dbConn2</CSharpValue>
+
++                    <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">dbConn1</CSharpValue>
+
++                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">strFilePathDataFolder</CSharpValue>
+
++                    <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">tblConfigQueries</CSharpReference>
+
++                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">blnShouldStop</CSharpValue>
+
++                            <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">tblConfigSettings</CSharpValue>
+
++                            <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">tblConfigDates</CSharpValue>
+
++                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">strFilePathDataFolder</CSharpValue>
+
++                            <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">tblConfigQueries</CSharpValue>
+
++                            <Sequence sap:VirtualizedContainerService.HintSize="602,706" sap2010:WorkflowViewState.IdRef="Sequence_11">
+
++                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="540,595" sap2010:WorkflowViewState.IdRef="Sequence_3">
+
++                                <sap:WorkflowViewStateService.ViewState>
+
++                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+
++                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+
++                                  </scg:Dictionary>
+
++                                </sap:WorkflowViewStateService.ViewState>
+
++                                <If sap:VirtualizedContainerService.HintSize="478,484" sap2010:WorkflowViewState.IdRef="If_1">
+
++                                  <If.Condition>
+
++                                    <InArgument x:TypeArguments="x:Boolean">
+
++                                      <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">currentRow.ItemArray[13].ToString() == "Completed"</CSharpValue>
+
++                                    </InArgument>
+
++                                  </If.Condition>
+
++                                  <If.Then>
+
++                                    <Sequence sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="Sequence_1">
+
++                                      <sap:WorkflowViewStateService.ViewState>
+
++                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+
++                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+
++                                        </scg:Dictionary>
+
++                                      </sap:WorkflowViewStateService.ViewState>
+
++                                      <ui:Continue sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="Continue_1" />
+
++                                    </Sequence>
+
++                                  </If.Then>
+
++                                  <If.Else>
+
++                                    <Sequence sap:VirtualizedContainerService.HintSize="400,172" sap2010:WorkflowViewState.IdRef="Sequence_2">
+
++                                      <sap:WorkflowViewStateService.ViewState>
+
++                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+
++                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+
++                                        </scg:Dictionary>
+
++                                      </sap:WorkflowViewStateService.ViewState>
+
++                                      <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+
++                                        <Assign.To>
+
++                                          <OutArgument x:TypeArguments="x:Boolean">
+
++                                            <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">blnShouldRepeat</CSharpReference>
+
++                                          </OutArgument>
+
++                                        </Assign.To>
+
++                                        <Assign.Value>
+
++                                          <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+
++                                        </Assign.Value>
+
++                                      </Assign>
+
++                                    </Sequence>
+
++                                  </If.Else>
+
++                                </If>
+
++                              </Sequence>
+
++                            <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">tblConfigQueries</CSharpValue>
+
++                            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">blnShouldRepeat</CSharpValue>
+
++                                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_76">intQueryRetries == 3</CSharpValue>
+
++                                  <Sequence sap:VirtualizedContainerService.HintSize="400,325" sap2010:WorkflowViewState.IdRef="Sequence_4">
+
++                                    <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+
++                                          <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">blnShouldStop</CSharpReference>
+
++                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Error.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Sequences - Error Handling\\Error.xaml">
+
++                                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">blnShouldStop</CSharpValue>
+
++                                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">tblConfigSettings.Rows[8].ItemArray[1].ToString()</CSharpValue>
+
++                                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">tblConfigSettings.Rows[7].ItemArray[1].ToString()</CSharpValue>
+
++                                  <Sequence sap:VirtualizedContainerService.HintSize="400,172" sap2010:WorkflowViewState.IdRef="Sequence_5">
+
++                                    <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_3">
+
++                                          <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">intQueryRetries</CSharpReference>
+
++                                          <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">intQueryRetries + 1</CSharpValue>
+
++                                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">blnShouldStop</CSharpValue>
+
++                                    <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">dbConn1</CSharpValue>
+
++                                    <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">dbConn2</CSharpValue>
+
++                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+
++                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke: Zip Files (If Needed)" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Sequences - Zipping Files\\Zip Files (If Needed).xaml">
+
++                                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">tblConfigSettings</CSharpValue>
+
++                                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">tblConfigQueries</CSharpValue>
+
++                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">strFilePathConfigFile</CSharpValue>
+
++                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">strFilePathDataFolder</CSharpValue>
+
++                                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">blnShouldStop</CSharpValue>
+
++                                              <av:Size x:Key="ShapeSize">200,52</av:Size>
+
++                                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="Check: Queries Completed" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+
++                                                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">currentRow.ItemArray[14].ToString() == "Completed"</CSharpValue>
+
++                                                              <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">blnShouldRepeat</CSharpReference>
+
++                                                <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">tblConfigQueries</CSharpValue>
+
++                                                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">blnShouldRepeat</CSharpValue>
+
++                                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+
++                                                  <If DisplayName="Check: Number of Retries" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="If_4">
+
++                                                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">intFinalCheckRetries == 3</CSharpValue>
+
++                                                      <Sequence sap:VirtualizedContainerService.HintSize="400,325" sap2010:WorkflowViewState.IdRef="Sequence_9">
+
++                                                        <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_5">
+
++                                                              <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">blnShouldStop</CSharpReference>
+
++                                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Error.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Sequences - Error Handling\\Error.xaml">
+
++                                                              <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">blnShouldStop</CSharpValue>
+
++                                                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">tblConfigSettings.Rows[8].ItemArray[1].ToString()</CSharpValue>
+
++                                                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">tblConfigSettings.Rows[7].ItemArray[1].ToString()</CSharpValue>
+
++                                                              <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">intFinalCheckRetries</CSharpReference>
+
++                                                              <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">intFinalCheckRetries + 1</CSharpValue>
+
++                                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+
++                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke: Email Files" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Sequences - Email Files\\Email Files - Main.xaml">
+
++                                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">strFilePathConfigFile</CSharpValue>
+
++                                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">strFilePathDataFolder</CSharpValue>
+
++                                                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">tblConfigQueries</CSharpValue>
+
++                                                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">tblConfigSettings</CSharpValue>
+
++                                                          <av:Size x:Key="ShapeSize">200,52</av:Size>
+
++                                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="0001 Send Email.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Sequences - Email Files\\0001 Send Email.xaml">
+
++                                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72">tblConfigSettings.Rows[10].ItemArray[1].ToString()</CSharpValue>
+
++                                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">"FedPay End of Month Reporting Completed - " + DateTime.Today.ToShortDateString()</CSharpValue>
+
++                                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_70">tblConfigSettings.Rows[7].ItemArray[1].ToString()</CSharpValue>
+
++                                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">"FedPay EoM Reporting bot has completed successfully on " + DateTime.Now.ToString("MM/dd/yyyy hh:mm tt") + " EST."</CSharpValue>
+
++          <av:PointCollection x:Key="ConnectorLocation">360,56.5 360,86.5 369.5,86.5 369.5,94</av:PointCollection>
+
+--- file1.txt
++++ file2.txt
+-<Activity mc:Ignorable="sap sap2010" x:Class="Main_Workflow" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1872,1247" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
++<Activity mc:Ignorable="sap sap2010" x:Class="Main_Workflow" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1872,1247" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
++      <x:String>GlobalVariablesNamespace</x:String>
+
++      <x:String>GlobalConstantsNamespace</x:String>
+
++      <x:String>UiPath.DataTableUtilities</x:String>
+
+-    <sco:Collection x:TypeArguments="AssemblyReference">
+
++    <scg:List x:TypeArguments="AssemblyReference" Capacity="48">
+
+-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+
++      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+
++      <AssemblyReference>System.Memory.Data</AssemblyReference>
+
++      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+
++      <AssemblyReference>System.Console</AssemblyReference>
+
++      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+
++      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+
++      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+
++      <AssemblyReference>System.ComponentModel</AssemblyReference>
+
++      <AssemblyReference>System.Private.Uri</AssemblyReference>
+
+-    </sco:Collection>
+
++    </scg:List>
+
+-      <Variable x:TypeArguments="x:String" Default="H:\FedPay End of Month (EoM) Reporting\Data\FedPay EoM Reporting Config.xlsx" Name="strFilePathConfigFile" />
+
+-      <Variable x:TypeArguments="x:String" Default="H:\FedPay End of Month (EoM) Reporting\Data\" Name="strFilePathDataFolder" />
+
++      <Variable x:TypeArguments="x:String" Default="H:\FedPay End of Month Reporting_Converted\Data\FedPay EoM Reporting Config.xlsx" Name="strFilePathConfigFile" />
+
++      <Variable x:TypeArguments="x:String" Default="H:\FedPay End of Month Reporting_Converted\Data\" Name="strFilePathDataFolder" />
+
+-        <x:Double x:Key="Height">1144.6625571628269</x:Double>
+
++        <x:Double x:Key="Height">1144.662557162827</x:Double>
+
+-          <av:Size x:Key="ShapeSize">200,52</av:Size>
+
+-          <av:PointCollection x:Key="ConnectorLocation">360,145 360,175 359.5,175 359.5,196.5</av:PointCollection>
+
++          <av:Size x:Key="ShapeSize">219,52</av:Size>
+
++          <av:PointCollection x:Key="ConnectorLocation">369.5,146 369.5,176 359.5,176 359.5,196.5</av:PointCollection>
+
+-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="" DisplayName="Invoke: Initial Setup" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Sequences - Initial Setup\\Initial Setup.xaml">
+
++      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="" DisplayName="Initial Setup.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="219,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Sequences - Initial Setup\\Initial Setup.xaml">
+
+-            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">tblConfigQueries</mca:CSharpReference>
+
++            <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">tblConfigQueries</CSharpReference>
+
+-            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">tblConfigSettings</mca:CSharpReference>
+
++            <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">tblConfigSettings</CSharpReference>
+
+-            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">tblConfigDates</mca:CSharpReference>
+
++            <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">tblConfigDates</CSharpReference>
+
+-            <mca:CSharpReference x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">dbConn1</mca:CSharpReference>
+
++            <CSharpReference x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">dbConn1</CSharpReference>
+
+-            <mca:CSharpReference x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">dbConn2</mca:CSharpReference>
+
++            <CSharpReference x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">dbConn2</CSharpReference>
+
+-            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">strFilePathConfigFile</mca:CSharpValue>
+
++            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">strFilePathConfigFile</CSharpValue>
+
+-            <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">blnShouldStop</mca:CSharpReference>
+
++            <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">blnShouldStop</CSharpReference>
+
+-            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">strFilePathDataFolder</mca:CSharpValue>
+
++            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">strFilePathDataFolder</CSharpValue>
+
+-            <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">blnShouldStop</mca:CSharpValue>
+
++            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">blnShouldStop</CSharpValue>
+
+-                    <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">tblConfigSettings</mca:CSharpValue>
+
++                    <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">tblConfigSettings</CSharpValue>
+
+-                    <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">tblConfigDates</mca:CSharpValue>
+
++                    <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">tblConfigDates</CSharpValue>
+
+-                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_63">strFilePathDataFolder</mca:CSharpValue>
+
++                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_63">strFilePathDataFolder</CSharpValue>
+
+-                    <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_64">tblConfigQueries</mca:CSharpValue>
+
++                    <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_64">tblConfigQueries</CSharpValue>
+
+-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke: Run Queries" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Sequences - SQL Queries\\Run Queries.xaml">
+
++              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Run Queries.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Sequences - SQL Queries\\Run Queries.xaml">
+
+-                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">strFilePathConfigFile</mca:CSharpValue>
+
++                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">strFilePathConfigFile</CSharpValue>
+
+-                    <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">tblConfigSettings</mca:CSharpValue>
+
++                    <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">tblConfigSettings</CSharpValue>
+
+-                    <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">tblConfigDates</mca:CSharpValue>
+
++                    <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">tblConfigDates</CSharpValue>
+
+-                    <mca:CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">dbConn2</mca:CSharpValue>
+
++                    <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">dbConn2</CSharpValue>
+
+-                    <mca:CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">dbConn1</mca:CSharpValue>
+
++                    <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">dbConn1</CSharpValue>
+
+-                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">strFilePathDataFolder</mca:CSharpValue>
+
++                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">strFilePathDataFolder</CSharpValue>
+
+-                    <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">tblConfigQueries</mca:CSharpReference>
+
++                    <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">tblConfigQueries</CSharpReference>
+
+-                    <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">blnShouldStop</mca:CSharpValue>
+
++                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">blnShouldStop</CSharpValue>
+
+-                            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">tblConfigSettings</mca:CSharpValue>
+
++                            <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">tblConfigSettings</CSharpValue>
+
+-                            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">tblConfigDates</mca:CSharpValue>
+
++                            <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">tblConfigDates</CSharpValue>
+
+-                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">strFilePathDataFolder</mca:CSharpValue>
+
++                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">strFilePathDataFolder</CSharpValue>
+
+-                            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">tblConfigQueries</mca:CSharpValue>
+
++                            <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">tblConfigQueries</CSharpValue>
+
+-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="633,402" sap2010:WorkflowViewState.IdRef="Sequence_3">
+
++                            <Sequence sap:VirtualizedContainerService.HintSize="602,706" sap2010:WorkflowViewState.IdRef="Sequence_11">
+
+-                              <If sap:VirtualizedContainerService.HintSize="591,310" sap2010:WorkflowViewState.IdRef="If_1">
+
+-                                <If.Condition>
+
+-                                  <InArgument x:TypeArguments="x:Boolean">
+
+-                                    <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">currentRow.ItemArray[13].ToString() == "Completed"</mca:CSharpValue>
+
+-                                  </InArgument>
+
+-                                </If.Condition>
+
+-                                <If.Then>
+
+-                                  <Sequence sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_1">
+
+-                                    <sap:WorkflowViewStateService.ViewState>
+
+-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+
+-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+
+-                                      </scg:Dictionary>
+
+-                                    </sap:WorkflowViewStateService.ViewState>
+
+-                                    <ui:Continue sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Continue_1" />
+
+-                                  </Sequence>
+
+-                                </If.Then>
+
+-                                <If.Else>
+
+-                                  <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_2">
+
+-                                    <sap:WorkflowViewStateService.ViewState>
+
+-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+
+-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+
+-                                      </scg:Dictionary>
+
+-                                    </sap:WorkflowViewStateService.ViewState>
+
+-                                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+
+-                                      <Assign.To>
+
+-                                        <OutArgument x:TypeArguments="x:Boolean">
+
+-                                          <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">blnShouldRepeat</mca:CSharpReference>
+
+-                                        </OutArgument>
+
+-                                      </Assign.To>
+
+-                                      <Assign.Value>
+
+-                                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+
+-                                      </Assign.Value>
+
+-                                    </Assign>
+
+-                                  </Sequence>
+
+-                                </If.Else>
+
+-                              </If>
+
++                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="540,595" sap2010:WorkflowViewState.IdRef="Sequence_3">
+
++                                <sap:WorkflowViewStateService.ViewState>
+
++                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+
++                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+
++                                  </scg:Dictionary>
+
++                                </sap:WorkflowViewStateService.ViewState>
+
++                                <If sap:VirtualizedContainerService.HintSize="478,484" sap2010:WorkflowViewState.IdRef="If_1">
+
++                                  <If.Condition>
+
++                                    <InArgument x:TypeArguments="x:Boolean">
+
++                                      <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">currentRow.ItemArray[13].ToString() == "Completed"</CSharpValue>
+
++                                    </InArgument>
+
++                                  </If.Condition>
+
++                                  <If.Then>
+
++                                    <Sequence sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="Sequence_1">
+
++                                      <sap:WorkflowViewStateService.ViewState>
+
++                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+
++                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+
++                                        </scg:Dictionary>
+
++                                      </sap:WorkflowViewStateService.ViewState>
+
++                                      <ui:Continue sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="Continue_1" />
+
++                                    </Sequence>
+
++                                  </If.Then>
+
++                                  <If.Else>
+
++                                    <Sequence sap:VirtualizedContainerService.HintSize="400,172" sap2010:WorkflowViewState.IdRef="Sequence_2">
+
++                                      <sap:WorkflowViewStateService.ViewState>
+
++                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+
++                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+
++                                        </scg:Dictionary>
+
++                                      </sap:WorkflowViewStateService.ViewState>
+
++                                      <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+
++                                        <Assign.To>
+
++                                          <OutArgument x:TypeArguments="x:Boolean">
+
++                                            <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">blnShouldRepeat</CSharpReference>
+
++                                          </OutArgument>
+
++                                        </Assign.To>
+
++                                        <Assign.Value>
+
++                                          <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+
++                                        </Assign.Value>
+
++                                      </Assign>
+
++                                    </Sequence>
+
++                                  </If.Else>
+
++                                </If>
+
++                              </Sequence>
+
+-                            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">tblConfigQueries</mca:CSharpValue>
+
++                            <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">tblConfigQueries</CSharpValue>
+
+-                            <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">blnShouldRepeat</mca:CSharpValue>
+
++                            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">blnShouldRepeat</CSharpValue>
+
+-                                    <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">intQueryRetries == 3</mca:CSharpValue>
+
++                                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_76">intQueryRetries == 3</CSharpValue>
+
+-                                  <Sequence sap:VirtualizedContainerService.HintSize="376,304" sap2010:WorkflowViewState.IdRef="Sequence_4">
+
++                                  <Sequence sap:VirtualizedContainerService.HintSize="400,325" sap2010:WorkflowViewState.IdRef="Sequence_4">
+
+-                                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+
++                                    <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+
+-                                          <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">blnShouldStop</mca:CSharpReference>
+
++                                          <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">blnShouldStop</CSharpReference>
+
+-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Error.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Sequences - Error Handling\\Error.xaml">
+
++                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Error.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Sequences - Error Handling\\Error.xaml">
+
+-                                          <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">blnShouldStop</mca:CSharpValue>
+
++                                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">blnShouldStop</CSharpValue>
+
+-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">tblConfigSettings.Rows[8].ItemArray[1].ToString()</mca:CSharpValue>
+
++                                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">tblConfigSettings.Rows[8].ItemArray[1].ToString()</CSharpValue>
+
+-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">tblConfigSettings.Rows[7].ItemArray[1].ToString()</mca:CSharpValue>
+
++                                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">tblConfigSettings.Rows[7].ItemArray[1].ToString()</CSharpValue>
+
+-                                  <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_5">
+
++                                  <Sequence sap:VirtualizedContainerService.HintSize="400,172" sap2010:WorkflowViewState.IdRef="Sequence_5">
+
+-                                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+
++                                    <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_3">
+
+-                                          <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">intQueryRetries</mca:CSharpReference>
+
++                                          <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">intQueryRetries</CSharpReference>
+
+-                                          <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">intQueryRetries + 1</mca:CSharpValue>
+
++                                          <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">intQueryRetries + 1</CSharpValue>
+
+-                                    <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">blnShouldStop</mca:CSharpValue>
+
++                                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">blnShouldStop</CSharpValue>
+
+-                                    <mca:CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">dbConn1</mca:CSharpValue>
+
++                                    <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">dbConn1</CSharpValue>
+
+-                                    <mca:CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">dbConn2</mca:CSharpValue>
+
++                                    <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">dbConn2</CSharpValue>
+
+-                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+
++                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+
+-                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke: Zip Files (If Needed)" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Sequences - Zipping Files\\Zip Files (If Needed).xaml">
+
++                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke: Zip Files (If Needed)" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Sequences - Zipping Files\\Zip Files (If Needed).xaml">
+
+-                                        <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">tblConfigSettings</mca:CSharpValue>
+
++                                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">tblConfigSettings</CSharpValue>
+
+-                                        <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">tblConfigQueries</mca:CSharpValue>
+
++                                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">tblConfigQueries</CSharpValue>
+
+-                                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">strFilePathConfigFile</mca:CSharpValue>
+
++                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">strFilePathConfigFile</CSharpValue>
+
+-                                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">strFilePathDataFolder</mca:CSharpValue>
+
++                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">strFilePathDataFolder</CSharpValue>
+
+-                                        <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">blnShouldStop</mca:CSharpValue>
+
++                                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">blnShouldStop</CSharpValue>
+
+-                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+
++                                              <av:Size x:Key="ShapeSize">200,52</av:Size>
+
+-                                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="Check: Queries Completed" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+
++                                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="Check: Queries Completed" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+
+-                                                        <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">currentRow.ItemArray[14].ToString() == "Completed"</mca:CSharpValue>
+
++                                                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">currentRow.ItemArray[14].ToString() == "Completed"</CSharpValue>
+
+-                                                              <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">blnShouldRepeat</mca:CSharpReference>
+
++                                                              <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">blnShouldRepeat</CSharpReference>
+
+-                                                <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">tblConfigQueries</mca:CSharpValue>
+
++                                                <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">tblConfigQueries</CSharpValue>
+
+-                                                <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">blnShouldRepeat</mca:CSharpValue>
+
++                                                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">blnShouldRepeat</CSharpValue>
+
+-                                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+
++                                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+
+-                                                  <If DisplayName="Check: Number of Retries" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_4">
+
++                                                  <If DisplayName="Check: Number of Retries" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="If_4">
+
+-                                                        <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">intFinalCheckRetries == 3</mca:CSharpValue>
+
++                                                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">intFinalCheckRetries == 3</CSharpValue>
+
+-                                                      <Sequence sap:VirtualizedContainerService.HintSize="376,305" sap2010:WorkflowViewState.IdRef="Sequence_9">
+
++                                                      <Sequence sap:VirtualizedContainerService.HintSize="400,325" sap2010:WorkflowViewState.IdRef="Sequence_9">
+
+-                                                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+
++                                                        <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_5">
+
+-                                                              <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">blnShouldStop</mca:CSharpReference>
+
++                                                              <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">blnShouldStop</CSharpReference>
+
+-                                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Error.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Sequences - Error Handling\\Error.xaml">
+
++                                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Error.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Sequences - Error Handling\\Error.xaml">
+
+-                                                              <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">blnShouldStop</mca:CSharpValue>
+
++                                                              <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">blnShouldStop</CSharpValue>
+
+-                                                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">tblConfigSettings.Rows[8].ItemArray[1].ToString()</mca:CSharpValue>
+
++                                                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">tblConfigSettings.Rows[8].ItemArray[1].ToString()</CSharpValue>
+
+-                                                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">tblConfigSettings.Rows[7].ItemArray[1].ToString()</mca:CSharpValue>
+
++                                                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">tblConfigSettings.Rows[7].ItemArray[1].ToString()</CSharpValue>
+
+-                                                              <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">intFinalCheckRetries</mca:CSharpReference>
+
++                                                              <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">intFinalCheckRetries</CSharpReference>
+
+-                                                              <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">intFinalCheckRetries + 1</mca:CSharpValue>
+
++                                                              <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">intFinalCheckRetries + 1</CSharpValue>
+
+-                                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+
++                                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+
+-                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke: Email Files" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Sequences - Email Files\\Email Files - Main.xaml">
+
++                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke: Email Files" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Sequences - Email Files\\Email Files - Main.xaml">
+
+-                                                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">strFilePathConfigFile</mca:CSharpValue>
+
++                                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">strFilePathConfigFile</CSharpValue>
+
+-                                                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">strFilePathDataFolder</mca:CSharpValue>
+
++                                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">strFilePathDataFolder</CSharpValue>
+
+-                                                        <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">tblConfigQueries</mca:CSharpValue>
+
++                                                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">tblConfigQueries</CSharpValue>
+
+-                                                        <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">tblConfigSettings</mca:CSharpValue>
+
++                                                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">tblConfigSettings</CSharpValue>
+
+-                                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+
++                                                          <av:Size x:Key="ShapeSize">200,52</av:Size>
+
+-                                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="0001 Send Email.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Sequences - Email Files\\0001 Send Email.xaml">
+
++                                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="0001 Send Email.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Sequences - Email Files\\0001 Send Email.xaml">
+
+-                                                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72">tblConfigSettings.Rows[10].ItemArray[1].ToString()</mca:CSharpValue>
+
++                                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72">tblConfigSettings.Rows[10].ItemArray[1].ToString()</CSharpValue>
+
+-                                                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">"FedPay End of Month Reporting Completed - " + DateTime.Today.ToShortDateString()</mca:CSharpValue>
+
++                                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">"FedPay End of Month Reporting Completed - " + DateTime.Today.ToShortDateString()</CSharpValue>
+
+-                                                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_70">tblConfigSettings.Rows[7].ItemArray[1].ToString()</mca:CSharpValue>
+
++                                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_70">tblConfigSettings.Rows[7].ItemArray[1].ToString()</CSharpValue>
+
+-                                                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">"FedPay EoM Reporting bot has completed successfully on " + DateTime.Now.ToString("MM/dd/yyyy hh:mm tt") + " EST."</mca:CSharpValue>
+
++                                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">"FedPay EoM Reporting bot has completed successfully on " + DateTime.Now.ToString("MM/dd/yyyy hh:mm tt") + " EST."</CSharpValue>
+
+-          <av:PointCollection x:Key="ConnectorLocation">360,55.5 360,94</av:PointCollection>
+
++          <av:PointCollection x:Key="ConnectorLocation">360,56.5 360,86.5 369.5,86.5 369.5,94</av:PointCollection>
+
+--- file1.txt+++ file2.txt-<Activity mc:Ignorable="sap sap2010" x:Class="Main_Workflow" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1872,1247" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
++<Activity mc:Ignorable="sap sap2010" x:Class="Main_Workflow" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1872,1247" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
++      <x:String>GlobalVariablesNamespace</x:String>
++      <x:String>GlobalConstantsNamespace</x:String>
++      <x:String>UiPath.DataTableUtilities</x:String>
+-    <sco:Collection x:TypeArguments="AssemblyReference">
++    <scg:List x:TypeArguments="AssemblyReference" Capacity="48">
+-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
++      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
++      <AssemblyReference>System.Memory.Data</AssemblyReference>
++      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
++      <AssemblyReference>System.Console</AssemblyReference>
++      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
++      <AssemblyReference>System.Security.Permissions</AssemblyReference>
++      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
++      <AssemblyReference>System.ComponentModel</AssemblyReference>
++      <AssemblyReference>System.Private.Uri</AssemblyReference>
+-    </sco:Collection>
++    </scg:List>
+-      <Variable x:TypeArguments="x:String" Default="H:\FedPay End of Month (EoM) Reporting\Data\FedPay EoM Reporting Config.xlsx" Name="strFilePathConfigFile" />
+-      <Variable x:TypeArguments="x:String" Default="H:\FedPay End of Month (EoM) Reporting\Data\" Name="strFilePathDataFolder" />
++      <Variable x:TypeArguments="x:String" Default="H:\FedPay End of Month Reporting_Converted\Data\FedPay EoM Reporting Config.xlsx" Name="strFilePathConfigFile" />
++      <Variable x:TypeArguments="x:String" Default="H:\FedPay End of Month Reporting_Converted\Data\" Name="strFilePathDataFolder" />
+-        <x:Double x:Key="Height">1144.6625571628269</x:Double>
++        <x:Double x:Key="Height">1144.662557162827</x:Double>
+-          <av:Size x:Key="ShapeSize">200,52</av:Size>
+-          <av:PointCollection x:Key="ConnectorLocation">360,145 360,175 359.5,175 359.5,196.5</av:PointCollection>
++          <av:Size x:Key="ShapeSize">219,52</av:Size>
++          <av:PointCollection x:Key="ConnectorLocation">369.5,146 369.5,176 359.5,176 359.5,196.5</av:PointCollection>
+-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="" DisplayName="Invoke: Initial Setup" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Sequences - Initial Setup\\Initial Setup.xaml">
++      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="" DisplayName="Initial Setup.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="219,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Sequences - Initial Setup\\Initial Setup.xaml">
+-            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">tblConfigQueries</mca:CSharpReference>
++            <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">tblConfigQueries</CSharpReference>
+-            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">tblConfigSettings</mca:CSharpReference>
++            <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">tblConfigSettings</CSharpReference>
+-            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">tblConfigDates</mca:CSharpReference>
++            <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">tblConfigDates</CSharpReference>
+-            <mca:CSharpReference x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">dbConn1</mca:CSharpReference>
++            <CSharpReference x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">dbConn1</CSharpReference>
+-            <mca:CSharpReference x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">dbConn2</mca:CSharpReference>
++            <CSharpReference x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">dbConn2</CSharpReference>
+-            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">strFilePathConfigFile</mca:CSharpValue>
++            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">strFilePathConfigFile</CSharpValue>
+-            <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">blnShouldStop</mca:CSharpReference>
++            <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">blnShouldStop</CSharpReference>
+-            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">strFilePathDataFolder</mca:CSharpValue>
++            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">strFilePathDataFolder</CSharpValue>
+-            <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">blnShouldStop</mca:CSharpValue>
++            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">blnShouldStop</CSharpValue>
+-                    <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">tblConfigSettings</mca:CSharpValue>
++                    <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">tblConfigSettings</CSharpValue>
+-                    <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">tblConfigDates</mca:CSharpValue>
++                    <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">tblConfigDates</CSharpValue>
+-                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_63">strFilePathDataFolder</mca:CSharpValue>
++                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_63">strFilePathDataFolder</CSharpValue>
+-                    <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_64">tblConfigQueries</mca:CSharpValue>
++                    <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_64">tblConfigQueries</CSharpValue>
+-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke: Run Queries" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Sequences - SQL Queries\\Run Queries.xaml">
++              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Run Queries.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Sequences - SQL Queries\\Run Queries.xaml">
+-                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">strFilePathConfigFile</mca:CSharpValue>
++                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">strFilePathConfigFile</CSharpValue>
+-                    <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">tblConfigSettings</mca:CSharpValue>
++                    <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">tblConfigSettings</CSharpValue>
+-                    <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">tblConfigDates</mca:CSharpValue>
++                    <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">tblConfigDates</CSharpValue>
+-                    <mca:CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">dbConn2</mca:CSharpValue>
++                    <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">dbConn2</CSharpValue>
+-                    <mca:CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">dbConn1</mca:CSharpValue>
++                    <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">dbConn1</CSharpValue>
+-                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">strFilePathDataFolder</mca:CSharpValue>
++                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">strFilePathDataFolder</CSharpValue>
+-                    <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">tblConfigQueries</mca:CSharpReference>
++                    <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">tblConfigQueries</CSharpReference>
+-                    <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">blnShouldStop</mca:CSharpValue>
++                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">blnShouldStop</CSharpValue>
+-                            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">tblConfigSettings</mca:CSharpValue>
++                            <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">tblConfigSettings</CSharpValue>
+-                            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">tblConfigDates</mca:CSharpValue>
++                            <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">tblConfigDates</CSharpValue>
+-                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">strFilePathDataFolder</mca:CSharpValue>
++                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">strFilePathDataFolder</CSharpValue>
+-                            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">tblConfigQueries</mca:CSharpValue>
++                            <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">tblConfigQueries</CSharpValue>
+-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="633,402" sap2010:WorkflowViewState.IdRef="Sequence_3">
++                            <Sequence sap:VirtualizedContainerService.HintSize="602,706" sap2010:WorkflowViewState.IdRef="Sequence_11">
+-                              <If sap:VirtualizedContainerService.HintSize="591,310" sap2010:WorkflowViewState.IdRef="If_1">
+-                                <If.Condition>
+-                                  <InArgument x:TypeArguments="x:Boolean">
+-                                    <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">currentRow.ItemArray[13].ToString() == "Completed"</mca:CSharpValue>
+-                                  </InArgument>
+-                                </If.Condition>
+-                                <If.Then>
+-                                  <Sequence sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_1">
+-                                    <sap:WorkflowViewStateService.ViewState>
+-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+-                                      </scg:Dictionary>
+-                                    </sap:WorkflowViewStateService.ViewState>
+-                                    <ui:Continue sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Continue_1" />
+-                                  </Sequence>
+-                                </If.Then>
+-                                <If.Else>
+-                                  <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_2">
+-                                    <sap:WorkflowViewStateService.ViewState>
+-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+-                                      </scg:Dictionary>
+-                                    </sap:WorkflowViewStateService.ViewState>
+-                                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+-                                      <Assign.To>
+-                                        <OutArgument x:TypeArguments="x:Boolean">
+-                                          <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">blnShouldRepeat</mca:CSharpReference>
+-                                        </OutArgument>
+-                                      </Assign.To>
+-                                      <Assign.Value>
+-                                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+-                                      </Assign.Value>
+-                                    </Assign>
+-                                  </Sequence>
+-                                </If.Else>
+-                              </If>
++                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="540,595" sap2010:WorkflowViewState.IdRef="Sequence_3">
++                                <sap:WorkflowViewStateService.ViewState>
++                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
++                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
++                                  </scg:Dictionary>
++                                </sap:WorkflowViewStateService.ViewState>
++                                <If sap:VirtualizedContainerService.HintSize="478,484" sap2010:WorkflowViewState.IdRef="If_1">
++                                  <If.Condition>
++                                    <InArgument x:TypeArguments="x:Boolean">
++                                      <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">currentRow.ItemArray[13].ToString() == "Completed"</CSharpValue>
++                                    </InArgument>
++                                  </If.Condition>
++                                  <If.Then>
++                                    <Sequence sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="Sequence_1">
++                                      <sap:WorkflowViewStateService.ViewState>
++                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
++                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
++                                        </scg:Dictionary>
++                                      </sap:WorkflowViewStateService.ViewState>
++                                      <ui:Continue sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="Continue_1" />
++                                    </Sequence>
++                                  </If.Then>
++                                  <If.Else>
++                                    <Sequence sap:VirtualizedContainerService.HintSize="400,172" sap2010:WorkflowViewState.IdRef="Sequence_2">
++                                      <sap:WorkflowViewStateService.ViewState>
++                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
++                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
++                                        </scg:Dictionary>
++                                      </sap:WorkflowViewStateService.ViewState>
++                                      <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_1">
++                                        <Assign.To>
++                                          <OutArgument x:TypeArguments="x:Boolean">
++                                            <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">blnShouldRepeat</CSharpReference>
++                                          </OutArgument>
++                                        </Assign.To>
++                                        <Assign.Value>
++                                          <InArgument x:TypeArguments="x:Boolean">True</InArgument>
++                                        </Assign.Value>
++                                      </Assign>
++                                    </Sequence>
++                                  </If.Else>
++                                </If>
++                              </Sequence>
+-                            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">tblConfigQueries</mca:CSharpValue>
++                            <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">tblConfigQueries</CSharpValue>
+-                            <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">blnShouldRepeat</mca:CSharpValue>
++                            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">blnShouldRepeat</CSharpValue>
+-                                    <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">intQueryRetries == 3</mca:CSharpValue>
++                                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_76">intQueryRetries == 3</CSharpValue>
+-                                  <Sequence sap:VirtualizedContainerService.HintSize="376,304" sap2010:WorkflowViewState.IdRef="Sequence_4">
++                                  <Sequence sap:VirtualizedContainerService.HintSize="400,325" sap2010:WorkflowViewState.IdRef="Sequence_4">
+-                                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
++                                    <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+-                                          <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">blnShouldStop</mca:CSharpReference>
++                                          <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">blnShouldStop</CSharpReference>
+-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Error.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Sequences - Error Handling\\Error.xaml">
++                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Error.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Sequences - Error Handling\\Error.xaml">
+-                                          <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">blnShouldStop</mca:CSharpValue>
++                                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">blnShouldStop</CSharpValue>
+-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">tblConfigSettings.Rows[8].ItemArray[1].ToString()</mca:CSharpValue>
++                                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">tblConfigSettings.Rows[8].ItemArray[1].ToString()</CSharpValue>
+-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">tblConfigSettings.Rows[7].ItemArray[1].ToString()</mca:CSharpValue>
++                                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">tblConfigSettings.Rows[7].ItemArray[1].ToString()</CSharpValue>
+-                                  <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_5">
++                                  <Sequence sap:VirtualizedContainerService.HintSize="400,172" sap2010:WorkflowViewState.IdRef="Sequence_5">
+-                                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
++                                    <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_3">
+-                                          <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">intQueryRetries</mca:CSharpReference>
++                                          <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">intQueryRetries</CSharpReference>
+-                                          <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">intQueryRetries + 1</mca:CSharpValue>
++                                          <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">intQueryRetries + 1</CSharpValue>
+-                                    <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">blnShouldStop</mca:CSharpValue>
++                                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">blnShouldStop</CSharpValue>
+-                                    <mca:CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">dbConn1</mca:CSharpValue>
++                                    <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">dbConn1</CSharpValue>
+-                                    <mca:CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">dbConn2</mca:CSharpValue>
++                                    <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">dbConn2</CSharpValue>
+-                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
++                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+-                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke: Zip Files (If Needed)" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Sequences - Zipping Files\\Zip Files (If Needed).xaml">
++                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke: Zip Files (If Needed)" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Sequences - Zipping Files\\Zip Files (If Needed).xaml">
+-                                        <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">tblConfigSettings</mca:CSharpValue>
++                                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">tblConfigSettings</CSharpValue>
+-                                        <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">tblConfigQueries</mca:CSharpValue>
++                                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">tblConfigQueries</CSharpValue>
+-                                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">strFilePathConfigFile</mca:CSharpValue>
++                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">strFilePathConfigFile</CSharpValue>
+-                                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">strFilePathDataFolder</mca:CSharpValue>
++                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">strFilePathDataFolder</CSharpValue>
+-                                        <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">blnShouldStop</mca:CSharpValue>
++                                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">blnShouldStop</CSharpValue>
+-                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
++                                              <av:Size x:Key="ShapeSize">200,52</av:Size>
+-                                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="Check: Queries Completed" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
++                                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="Check: Queries Completed" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+-                                                        <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">currentRow.ItemArray[14].ToString() == "Completed"</mca:CSharpValue>
++                                                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">currentRow.ItemArray[14].ToString() == "Completed"</CSharpValue>
+-                                                              <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">blnShouldRepeat</mca:CSharpReference>
++                                                              <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">blnShouldRepeat</CSharpReference>
+-                                                <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">tblConfigQueries</mca:CSharpValue>
++                                                <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">tblConfigQueries</CSharpValue>
+-                                                <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">blnShouldRepeat</mca:CSharpValue>
++                                                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">blnShouldRepeat</CSharpValue>
+-                                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
++                                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+-                                                  <If DisplayName="Check: Number of Retries" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_4">
++                                                  <If DisplayName="Check: Number of Retries" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="If_4">
+-                                                        <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">intFinalCheckRetries == 3</mca:CSharpValue>
++                                                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">intFinalCheckRetries == 3</CSharpValue>
+-                                                      <Sequence sap:VirtualizedContainerService.HintSize="376,305" sap2010:WorkflowViewState.IdRef="Sequence_9">
++                                                      <Sequence sap:VirtualizedContainerService.HintSize="400,325" sap2010:WorkflowViewState.IdRef="Sequence_9">
+-                                                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_5">
++                                                        <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_5">
+-                                                              <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">blnShouldStop</mca:CSharpReference>
++                                                              <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">blnShouldStop</CSharpReference>
+-                                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Error.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Sequences - Error Handling\\Error.xaml">
++                                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Error.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Sequences - Error Handling\\Error.xaml">
+-                                                              <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">blnShouldStop</mca:CSharpValue>
++                                                              <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">blnShouldStop</CSharpValue>
+-                                                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">tblConfigSettings.Rows[8].ItemArray[1].ToString()</mca:CSharpValue>
++                                                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">tblConfigSettings.Rows[8].ItemArray[1].ToString()</CSharpValue>
+-                                                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">tblConfigSettings.Rows[7].ItemArray[1].ToString()</mca:CSharpValue>
++                                                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">tblConfigSettings.Rows[7].ItemArray[1].ToString()</CSharpValue>
+-                                                              <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">intFinalCheckRetries</mca:CSharpReference>
++                                                              <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">intFinalCheckRetries</CSharpReference>
+-                                                              <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">intFinalCheckRetries + 1</mca:CSharpValue>
++                                                              <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">intFinalCheckRetries + 1</CSharpValue>
+-                                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
++                                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+-                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke: Email Files" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Sequences - Email Files\\Email Files - Main.xaml">
++                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke: Email Files" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Sequences - Email Files\\Email Files - Main.xaml">
+-                                                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">strFilePathConfigFile</mca:CSharpValue>
++                                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">strFilePathConfigFile</CSharpValue>
+-                                                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">strFilePathDataFolder</mca:CSharpValue>
++                                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">strFilePathDataFolder</CSharpValue>
+-                                                        <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">tblConfigQueries</mca:CSharpValue>
++                                                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">tblConfigQueries</CSharpValue>
+-                                                        <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">tblConfigSettings</mca:CSharpValue>
++                                                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">tblConfigSettings</CSharpValue>
+-                                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
++                                                          <av:Size x:Key="ShapeSize">200,52</av:Size>
+-                                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="0001 Send Email.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Sequences - Email Files\\0001 Send Email.xaml">
++                                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="0001 Send Email.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Sequences - Email Files\\0001 Send Email.xaml">
+-                                                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72">tblConfigSettings.Rows[10].ItemArray[1].ToString()</mca:CSharpValue>
++                                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72">tblConfigSettings.Rows[10].ItemArray[1].ToString()</CSharpValue>
+-                                                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">"FedPay End of Month Reporting Completed - " + DateTime.Today.ToShortDateString()</mca:CSharpValue>
++                                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">"FedPay End of Month Reporting Completed - " + DateTime.Today.ToShortDateString()</CSharpValue>
+-                                                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_70">tblConfigSettings.Rows[7].ItemArray[1].ToString()</mca:CSharpValue>
++                                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_70">tblConfigSettings.Rows[7].ItemArray[1].ToString()</CSharpValue>
+-                                                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">"FedPay EoM Reporting bot has completed successfully on " + DateTime.Now.ToString("MM/dd/yyyy hh:mm tt") + " EST."</mca:CSharpValue>
++                                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">"FedPay EoM Reporting bot has completed successfully on " + DateTime.Now.ToString("MM/dd/yyyy hh:mm tt") + " EST."</CSharpValue>
+-          <av:PointCollection x:Key="ConnectorLocation">360,55.5 360,94</av:PointCollection>
++          <av:PointCollection x:Key="ConnectorLocation">360,56.5 360,86.5 369.5,86.5 369.5,94</av:PointCollection>

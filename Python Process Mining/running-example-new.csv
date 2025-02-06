@@ -1,0 +1,147 @@
+order_number;action_taken;date_time;user_name
+1001;created;2024-07-01 08:12:33;Alice Johnson
+1001;updated address;2024-07-02 10:45:21;Bob Smith
+1001;approved;2024-07-03 14:30:15;Emily Davis
+1002;created;2024-07-02 09:28:47;David Wilson
+1002;updated status;2024-07-03 11:20:02;Alice Johnson
+1003;created;2024-07-01 15:54:09;Charlie Brown
+1003;reviewed;2024-07-02 16:40:55;Emily Davis
+1003;approved;2024-07-03 09:10:37;Bob Smith
+1004;created;2024-07-01 11:27:18;Alice Johnson
+1004;updated status;2024-07-02 13:05:44;David Wilson
+1004;updated address;2024-07-03 15:20:03;Charlie Brown
+1004;approved;2024-07-04 08:55:11;Emily Davis
+1005;created;2024-07-02 07:45:29;Bob Smith
+1005;reviewed;2024-07-03 10:30:58;David Wilson
+1006;created;2024-07-01 14:18:17;Alice Johnson
+1006;updated status;2024-07-02 16:10:22;Charlie Brown
+1006;approved;2024-07-03 18:40:59;Emily Davis
+1007;created;2024-07-01 09:32:45;David Wilson
+1007;updated address;2024-07-02 11:15:37;Alice Johnson
+1007;approved;2024-07-03 13:25:04;Bob Smith
+1008;created;2024-07-02 10:58:53;Charlie Brown
+1008;updated status;2024-07-03 12:40:11;Emily Davis
+1009;created;2024-07-01 13:24:22;Alice Johnson
+1009;reviewed;2024-07-02 15:05:39;David Wilson
+1009;approved;2024-07-03 17:30:18;Bob Smith
+1010;created;2024-07-01 08:57:51;Charlie Brown
+1010;updated status;2024-07-02 10:45:09;Emily Davis
+1011;created;2024-07-02 09:12:34;Alice Johnson
+1011;updated address;2024-07-03 11:00:57;David Wilson
+1011;approved;2024-07-04 13:20:29;Bob Smith
+1012;created;2024-07-01 14:50:06;Charlie Brown
+1012;updated status;2024-07-02 16:35:14;Emily Davis
+1013;created;2024-07-01 10:14:41;Alice Johnson
+1013;reviewed;2024-07-02 12:00:09;David Wilson
+1013;approved;2024-07-03 14:45:37;Charlie Brown
+1014;created;2024-07-01 08:32:57;Emily Davis
+1014;updated status;2024-07-02 10:15:04;Alice Johnson
+1014;updated address;2024-07-03 12:30:21;David Wilson
+1014;approved;2024-07-04 15:05:38;Bob Smith
+1015;created;2024-07-01 09:58:22;Charlie Brown
+1015;reviewed;2024-07-02 11:40:37;Emily Davis
+1015;approved;2024-07-03 13:20:04;Alice Johnson
+1016;created;2024-07-02 14:24:53;David Wilson
+1016;updated status;2024-07-03 16:10:29;Bob Smith
+1016;approved;2024-07-04 18:35:57;Charlie Brown
+1017;created;2024-07-01 12:42:11;Emily Davis
+1017;updated address;2024-07-02 14:25:27;Alice Johnson
+1017;approved;2024-07-03 16:15:49;David Wilson
+1018;created;2024-07-02 11:30:04;Bob Smith
+1018;updated status;2024-07-03 13:12:12;Charlie Brown
+1018;approved;2024-07-04 15:50:31;Emily Davis
+1019;created;2024-07-01 10:05:59;Alice Johnson
+1019;reviewed;2024-07-02 12:00:17;David Wilson
+1019;approved;2024-07-03 14:30:44;Bob Smith
+1020;created;2024-07-01 08:40:36;Charlie Brown
+1020;updated status;2024-07-02 10:22:44;Emily Davis
+1020;approved;2024-07-03 12:45:11;Alice Johnson
+1021;created;2024-07-01 13:54:28;David Wilson
+1021;updated address;2024-07-02 15:30:55;Bob Smith
+1021;approved;2024-07-03 17:10:22;Charlie Brown
+1022;created;2024-07-02 09:17:09;Emily Davis
+1022;updated status;2024-07-03 11:05:14;Alice Johnson
+1022;approved;2024-07-04 13:40:41;David Wilson
+1023;created;2024-07-01 14:20:07;Bob Smith
+1023;reviewed;2024-07-02 16:00:22;Charlie Brown
+1023;approved;2024-07-03 18:25:49;Emily Davis
+1024;created;2024-07-01 11:32:39;Alice Johnson
+1024;updated status;2024-07-02 13:20:47;David Wilson
+1024;updated address;2024-07-03 15:40:04;Bob Smith
+1024;approved;2024-07-04 08:15:31;Charlie Brown
+1025;created;2024-07-02 07:50:24;Emily Davis
+1025;reviewed;2024-07-03 10:35:11;Alice Johnson
+1025;approved;2024-07-04 12:00:28;David Wilson
+1026;created;2024-07-01 14:45:49;Charlie Brown
+1026;updated status;2024-07-02 16:30:06;Emily Davis
+1026;approved;2024-07-03 18:55:33;Alice Johnson
+1027;created;2024-07-01 09:58:17;David Wilson
+1027;updated address;2024-07-02 11:40:24;Charlie Brown
+1027;approved;2024-07-03 13:20:51;Emily Davis
+1028;created;2024-07-02 10:22:13;Alice Johnson
+1028;updated status;2024-07-03 12:10:29;Bob Smith
+1028;approved;2024-07-04 14:35:57;David Wilson
+1029;created;2024-07-01 13:12:41;Charlie Brown
+1029;reviewed;2024-07-02 15:00:58;Emily Davis
+1029;approved;2024-07-03 17:25:25;Alice Johnson
+1030;created;2024-07-01 08:40:09;David Wilson
+1030;updated address;2024-07-02 10:20:16;Bob Smith
+1030;approved;2024-07-03 12:45:43;Charlie Brown
+1031;created;2024-07-02 14:20:07;Emily Davis
+1031;updated status;2024-07-03 16:05:34;Alice Johnson
+1031;approved;2024-07-04 18:30:51;David Wilson
+1032;created;2024-07-01 12:35:29;Bob Smith
+1032;updated address;2024-07-02 14:10:17;Charlie Brown
+1032;approved;2024-07-03 16:45:44;Emily Davis
+1033;created;2024-07-02 11:58:33;Alice Johnson
+1033;reviewed;2024-07-03 13:45:49;David Wilson
+1033;approved;2024-07-04 15:20:16;Bob Smith
+1034;created;2024-07-01 10:22:49;Charlie Brown
+1034;updated status;2024-07-02 12:15:08;Emily Davis
+1034;approved;2024-07-03 14:40:35;Alice Johnson
+1035;created;2024-07-01 09:40:17;David Wilson
+1035;updated address;2024-07-02 11:20:34;Bob Smith
+1035;approved;2024-07-03 13:35:01;Charlie Brown
+1036;created;2024-07-02 08:50:27;Emily Davis
+1036;updated status;2024-07-03 10:30:44;Alice Johnson
+1036;approved;2024-07-04 12:05:11;David Wilson
+1037;created;2024-07-01 14:10:39;Charlie Brown
+1037;reviewed;2024-07-02 15:55:27;Emily Davis
+1037;approved;2024-07-03 17:30:54;Alice Johnson
+1038;created;2024-07-02 09:18:04;David Wilson
+1038;updated address;2024-07-03 11:00:21;Bob Smith
+1038;approved;2024-07-04 13:25:48;Charlie Brown
+1039;created;2024-07-01 12:25:51;Emily Davis
+1039;updated status;2024-07-02 14:15:09;Alice Johnson
+1039;approved;2024-07-03 16:40:36;David Wilson
+1040;created;2024-07-01 10:50:07;Bob Smith
+1040;reviewed;2024-07-02 12:40:44;Charlie Brown
+1040;approved;2024-07-03 14:50:11;Emily Davis
+1041;created;2024-07-01 09:12:33;Alice Johnson
+1041;updated status;2024-07-02 10:55:21;David Wilson
+1041;approved;2024-07-03 12:30:15;Bob Smith
+1042;created;2024-07-02 09:28:47;Charlie Brown
+1042;updated address;2024-07-03 11:20:02;Emily Davis
+1043;created;2024-07-01 15:54:09;Alice Johnson
+1043;reviewed;2024-07-02 17:40:55;Bob Smith
+1043;approved;2024-07-03 19:10:37;Charlie Brown
+1044;created;2024-07-01 11:27:18;David Wilson
+1044;updated status;2024-07-02 13:05:44;Alice Johnson
+1044;updated address;2024-07-03 15:20:03;Emily Davis
+1044;approved;2024-07-04 08:55:11;Bob Smith
+1045;created;2024-07-02 07:45:29;Charlie Brown
+1045;reviewed;2024-07-03 09:30:58;Emily Davis
+1046;created;2024-07-01 14:18:17;Alice Johnson
+1046;updated status;2024-07-02 16:10:22;David Wilson
+1046;approved;2024-07-03 18:40:59;Bob Smith
+1047;created;2024-07-01 09:32:45;Charlie Brown
+1047;updated address;2024-07-02 11:15:37;Emily Davis
+1047;approved;2024-07-03 13:25:04;Alice Johnson
+1048;created;2024-07-02 10:58:53;David Wilson
+1048;updated status;2024-07-03 12:40:11;Bob Smith
+1048;approved;2024-07-04 15:05:31;Charlie Brown
+1049;created;2024-07-01 13:24:22;Emily Davis
+1049;reviewed;2024-07-02 15:05:39;Alice Johnson
+1049;approved;2024-07-03 17:30:18;David Wilson
+1050;created;2024-07-01 08:57:51;Bob Smith
+1050;updated status;2024-07-02 10:45:09;Charlie Brown

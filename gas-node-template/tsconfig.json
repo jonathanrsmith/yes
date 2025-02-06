@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        // This may need to be ES2019, the docs recommend it, but I've gotten conflicting answers.
+        "target": "ESNext",
+        "module": "None",
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": false,
+        "allowJs": true,
+        "outDir": "dist",
+        "lib": [
+          "ESNext"
+        ],
+        "types": [
+          "google-apps-script"
+        ]
+      },
+      "include": ["src"]
+  }

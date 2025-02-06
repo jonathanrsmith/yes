@@ -1,0 +1,20 @@
+{
+  "name": "trace-sheet",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm run clean && tsc && cpy \"src/*.json\" dist",
+    "push": "clasp push",
+    "clean": "del-cli dist",
+    "publish": "npm run build && npm run push && npm run clean"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@google/clasp": "^2.4.2",
+    "@types/google-apps-script": "^1.0.83",
+    "cpy-cli": "^5.0.0",
+    "del-cli": "^5.1.0",
+    "typescript": "^5.5.4"
+  }
+}
